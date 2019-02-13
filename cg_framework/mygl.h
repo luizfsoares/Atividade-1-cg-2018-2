@@ -33,15 +33,14 @@ void PutPixel(int x, int y, color cores){
     if((x>=0) && (x<=512) && (y >=0) && (y <= 512)){
     
 	    int Offset = 4*x + 4*y* IMAGE_WIDTH;
-	    FBptr[Offset + 0] = cores.red; 
+	    FBptr[Offset + 0]= cores.red; 
 	    FBptr[Offset + 1]= cores.green;
 	    FBptr[Offset + 2]= cores.blue;
 	    FBptr[Offset + 3]= cores.alpha;}
 	
 	else{
 	    return;
-	}
-	
+	}	
 }
 
 color Interpolarizacao(double p, color corI, color corF){
@@ -193,7 +192,7 @@ void DrawTriangle(int x1, int y1, color cor1, int x2, int y2, color cor2, int x3
     DrawLine(x3, y3, x1, y1, cor3, cor1);
 
 }
-
+// fim
 
 
 #endif // _MYGL_H_

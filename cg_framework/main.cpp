@@ -8,7 +8,7 @@ void MyGlDraw(void)
 	//*************************************************************************
 	
 	
-	
+	//TESTE DOS PIXELS
 	/*PutPixel(255,255, orange);
 	PutPixel(255,256, orange);
 	PutPixel(130,130, white);
@@ -25,8 +25,8 @@ void MyGlDraw(void)
 	
 	
 	
-
-DrawLine(255, 255, 512, 255, red, blue); 
+//TESTES DOS OCTANTES
+/*DrawLine(255, 255, 512, 255, red, blue); 
 DrawLine(255, 255, 512, 512, white, orange); 
 DrawLine(255, 255, 255, 512, red, blue);
 DrawLine(255, 255, 0, 512, orange, blue);
@@ -34,7 +34,7 @@ DrawLine(255, 255, 0, 255, red, white);
 DrawLine(255, 255, 0, 0, green, blue);
 DrawLine(255, 255, 255, 0, white, yellow);
 DrawLine(255, 255, 512, 255, red, blue);
-DrawLine(255, 255, 512, 0, yellow, purple);
+DrawLine(255, 255, 512, 0, yellow, purple);*/
 
 
 
@@ -83,4 +83,5 @@ int main(int argc, char **argv)
 
 	return 0;
 }
+
 
