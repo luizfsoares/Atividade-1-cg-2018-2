@@ -30,11 +30,17 @@ color cores;
 
 void PutPixel(int x, int y, color cores){
 
-	int Offset = 4*x + 4*y* IMAGE_WIDTH;
-	FBptr[Offset + 0] = cores.red; 
-	FBptr[Offset + 1]= cores.green;
-	FBptr[Offset + 2]= cores.blue;
-	FBptr[Offset + 3]= cores.alpha;
+    if((x>=0) && (x<=512) && (y >=0) && (y <= 512)){
+    
+	    int Offset = 4*x + 4*y* IMAGE_WIDTH;
+	    FBptr[Offset + 0] = cores.red; 
+	    FBptr[Offset + 1]= cores.green;
+	    FBptr[Offset + 2]= cores.blue;
+	    FBptr[Offset + 3]= cores.alpha;}
+	
+	else{
+	    return;
+	}
 	
 }
 

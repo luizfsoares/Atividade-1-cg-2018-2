@@ -6,6 +6,25 @@ void MyGlDraw(void)
 	//*************************************************************************
 	// Chame aqui as funções do mygl.h
 	//*************************************************************************
+	
+	
+	
+	/*PutPixel(255,255, orange);
+	PutPixel(255,256, orange);
+	PutPixel(130,130, white);
+	PutPixel(130,131, white);
+	PutPixel(338,338, purple);
+	PutPixel(338,339, purple);
+	PutPixel(470,470, red);
+	PutPixel(470,471, red);
+	PutPixel(190,190, green);
+	PutPixel(190,191, green);
+	PutPixel(60,61, blue);
+	PutPixel(60,60, blue);*/
+	
+	
+	
+	
 
 DrawLine(255, 255, 512, 255, red, blue); 
 DrawLine(255, 255, 512, 512, white, orange); 
