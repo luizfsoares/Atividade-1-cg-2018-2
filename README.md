@@ -48,6 +48,8 @@ void PutPixel(int x, int y, color cores){
 	}	
 }
 ```
+Exemplo para chamada da função PutPixel.
+
 <p align="center"> 
 <img src="./prints/pixels.png" >
 </p>
@@ -100,12 +102,16 @@ if(dx < 0){ //3rd 4th 5th or 6th octant
     ...
 ```
 O código dos demais octantes detalhado está na pasta cg_framework
- 
+
+<p align="center"> 
 <img src="./prints/octantes.png">
+</p>
 
 Como foi dito na introdução, esta é a função mais importante que servirá de base para fazer as demais figuras geométricas, como por exemplo, o cubo que é mostrado a seguir:
 
+<p align="center">
 <img src="./prints/cubo.png">
+</p>
 
 ## DrawTriangle
 
@@ -119,7 +125,9 @@ void DrawTriangle(int x1, int y1, color cor1, int x2, int y2, color cor2, int x3
     DrawLine(x3, y3, x1, y1, cor3, cor1);
 }
 ```
+<p align="center">
 <img src="./prints/triangulo.png">
+</p>
 
 ## Interpolação de Cores
 
