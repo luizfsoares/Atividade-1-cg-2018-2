@@ -105,7 +105,7 @@ O código dos demais octantes detalhado está na pasta cg_framework
 
 Como foi dito na introdução, esta é a função mais importante que servirá de base para fazer as demais figuras geométricas, como por exemplo, o cubo que é mostrado a seguir:
 
-<img src="./print/cubo.png">
+<img src="./prints/cubo.png">
 
 ## DrawTriangle
 
