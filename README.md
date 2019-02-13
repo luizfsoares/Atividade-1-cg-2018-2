@@ -3,14 +3,15 @@ Rasterização de pontos e linhas.
 
 ### Trabalho realizado pelos alunos:
 
-Augusto Henrique O. dos Anjos - Matrícula: 20170009919
-Luiz Felipe Soares Cardoso - Matrícula: 20170000717
+ - Augusto Henrique O. dos Anjos - Matrícula: 20170009919
+ 
+ - Luiz Felipe Soares Cardoso - Matrícula: 20170000717
 
-##Introdução
+## Introdução
 
 O trabalho realizado consiste na criação 3 funções que se baseiam no esquema de rasterização de pontos e linhas. A rasterização de linhas faz uso do Algoritmo de Bresenham que é mais eficiente em relação ao de DDA, pois otimiza o código e gera um custo menor de processamento, tendo em vista que se livra do uso de operações de arredondamento e com ponto flutuante.
 
-##Implementação do código
+## Implementação do código
 
 Antes de tudo, foi necessário criar uma estrutura contendo as informações para cada cor utilizada, criando os campos para cada componente RGBA e em seguida a inicialização de cada cor, como será mostrado a seguir:
 
@@ -27,7 +28,7 @@ color green = {0,255,0,255};
 color blue = {0,0,255,255};
 ```
 
-##Função PutPixel
+## PutPixel
 
 Não é possível acessar e modificar diretamente a memória de vídeo, entaõ aqui foi usdo uma simulação feita pelo 'FBptr'. Para ativar um pixel na tela simulada, foi-se criado uma função PutPixel que recebe como parâmetros, os componentes X e Y da posição do pixel que deseja ser ativado e uma cor. Primeiramente é feito a checagem para saber se a posição é válida, ou seja, se está dentro do tamanho da tela criada. Posteriormente, é calculado o 'Offset' que é o deslocamento em x e em y e em seguida atribui os valores aos campos da estrutura.
 
@@ -47,17 +48,17 @@ void PutPixel(int x, int y, color cores){
 	}	
 }
 ```
+<p align="center"> 
+<img src="./prints/pixels.png" >
+</p>
 
-FOTOOOOOOOOOOOOOOOOOOOOOO
-
-
-##Função DrawLine
+## DrawLine
 
 Esta função recebe as componentes X e Y de uma posição inicial e uma posição final, assim como as cores que serão interpolarizadas.
 
 Os pontos inicial e final tratam de limitar a rasterização da linha que é feita com base no Algoritimo de Bresenham que ativa o próximo píxel com base em aproximações.
 
-FOTOOOOOOOOOOOOOOOOOOOOOOOOOO
+<img src="./prints/bresenhamslide.png">
 
 Este algoritimo é válido apenas para o primeiro octante, portanto é necessária a sua adaptação por meio de espelhamento para os demais octantes, como será mostrado a seguir:
 
@@ -100,15 +101,15 @@ if(dx < 0){ //3rd 4th 5th or 6th octant
 ```
 O código dos demais octantes detalhado está na pasta cg_framework
  
-  FOTOOOOOOOOOOOOOOOOOOO
+<img src="./prints/octantes.png">
 
 Como foi dito na introdução, esta é a função mais importante que servirá de base para fazer as demais figuras geométricas, como por exemplo, o cubo que é mostrado a seguir:
 
-FOTOOOOOOOOOOOOOOOOO
+<img src="./print/cubo.png">
 
 ## DrawTriangle
 
-Como já foi criado a função DrawLine, esta função se torna muito mais fácil, pois para a criação de um triângulo é necessário apenas realizar a chamada da função DrawLine três vezes, em que há vértices em comum. Ela recebe como parâmetro, as coordenadas dos três vertices, assim como as cores a serem interpolarizadas
+Como já foi criado a função DrawLine, esta função se torna muito mais fácil, pois para a criação de um triângulo é necessário apenas realizar a chamada da função DrawLine três vezes, em que há vértices em comum. Ela recebe como parâmetro, as coordenadas dos três vertices, assim como as cores a serem interpoladas
 
 ```c++
 void DrawTriangle(int x1, int y1, color cor1, int x2, int y2, color cor2, int x3, int y3, color cor3){
@@ -118,9 +119,9 @@ void DrawTriangle(int x1, int y1, color cor1, int x2, int y2, color cor2, int x3
     DrawLine(x3, y3, x1, y1, cor3, cor1);
 }
 ```
-FOTOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+<img src="./prints/triangulo.png">
 
-##Interpolação de Cores
+## Interpolação de Cores
 
 Interpolar cores é uma técnica de renderização de sombras em objetos 3D, a qual se torna possível a variação de cores ao longo de uma mesma reta. A técnica começa a ser aplicada desde o primeiro pixel e para isso, é necessário calcular a distância total da reta e a distância parcial (distância que falta para chegar até o pixel final). Com essas duas distâncias, é possível o cálculo de uma taxa 'p', no qual será usada na fórmula do cálculo da cor do pŕoximo pixel a ser desenhado pelo algoritmo. Como a distância parcial varia, então o cálculo da taxa irá variar também e como a taxa, dentro da fórmula, determina a próxima cor, esta também sofrerá variação se aproximando cada vez mais da tonalidade da cor final.
 
