@@ -143,14 +143,14 @@ E por fim invertemos a cordenada Y que se trata de uma propriedade do espaço de
 
 ## Última etapa - Rasterização
 
-Após a criação da Matriz final genérica mPipeline(Única utilizada na multiplicação por cada vértice) 
+Criamos por fim a matriz genérica mPipeline (Única utilizada na multiplicação por cada vértice) 
 
 ```c++
 glm::mat4x4 mPipeline =  mViewPort * mProjecao * mView * mModel;
 ```
 
 
-Como último passo, fazemos uso da última atividade de Computação Gráfica e, após carregadar o modelo do macaco contendo seus vértices assim como todas as tranformações necessárias ao longo do pipeline por meio da matriz única 'mPipeline' e homogenização, através da divisão de todos por w, chamamos a função 'DrawTriangle();' contida em 'mygl.h' responsável por desenhar todos os triângulos do macaco.
+Como último passo, fazemos uso da última atividade de Computação Gráfica  de rasterização de pontos e linhas e, após carregar o modelo do objeto contendo seus vértices assim como todas as tranformações necessárias ao longo do pipeline por meio da matriz única 'mPipeline' e homogenização dos mesmos por meio da divisão de todos pela cordenada homogênea w, chamamos a função 'DrawTriangle();' contida em 'mygl.h' responsável por desenhar todos os triângulos do macaco objeto.
 
 ```c++
 std::vector<glm::vec4> vertices = carregandoModelo("monkey.obj");
