@@ -75,7 +75,7 @@ Ao definir as características da câmera, podemos obter os eixos de coodenadas 
 
 
 <p align="center"> 
-<img src="./prints/câmera.png" >
+<img src="./prints/câmera.jpg" >
 </p>
 
 Cálculos necessários para obteção das cordenadas a partir das 3 características da câmera. Sua Posição P, seu up U e sua direção(look at - posição).
@@ -83,7 +83,7 @@ Cálculos necessários para obteção das cordenadas a partir das 3 característ
 Com isso podemos construir as duas matrizes responsáveis pela rotação e translação do espaço - Bt e T.
 
 <p align="center"> 
-<img src="./prints/btt.png" >
+<img src="./prints/btt.jpg" >
 </p>
 
 Matrizes Bt e T, a multiplicação das duas resulta na matriz View que desloca o objeto do espaço Universo para o espaço de Câmera.
@@ -119,7 +119,7 @@ canônico, gerando o boulding box necessiario que limita as coordenadas anterior
 
 
 <p align="center"> 
-<img src="./prints/cubo.png" >
+<img src="./prints/cubo.jpg" >
 </p>
 
 "Boulding Box" responsável pelas limitações do espaço Canônico
@@ -137,7 +137,7 @@ Escalamos o tamanho da mesma por meio de a partir de sua altura e largura.
 E por fim invertemos a cordenada Y que se trata de uma propriedade do espaço de tela.
 
 <p align="center"> 
-<img src="./prints/tela.png" >
+<img src="./prints/tela.jpg" >
 </p>
 
 
