@@ -181,6 +181,7 @@ Desta forma chegamos a renderização do objeto
 ## Resultados Obtidos
 
 Como considerações finais, percebemos uma grande crescente no entendimento de como se dá o processo de transformações geométricas necessárias para migração dos vértices do objeto até o espaço de tela. Assim como as funções do Pipeline Gráfico e supostamente como são realizados os cálculos das transformações presentes em cada espaço.
+Extra: Fizemos o modelo do macaco girar em torno do eixo Z, apagando, rotacionando um pouco e renderizando o macaco novamente dentro de um loop, dando assim a sensação de movimento. Não gravamos um vídeo mas ao dar compilar e executar o código será mostrado o mesmo.
 
 ## Principais dificuldades
 
