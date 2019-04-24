@@ -172,7 +172,11 @@ std::vector<glm::vec4> vertices = carregandoModelo("monkey.obj");
 
 ```
 
-Desta forma chegamos a renderização da cabeça de macaco
+Desta forma chegamos a renderização do objeto
+
+<p align="center"> 
+<img src="./prints/macaco.jpg" >
+</p>
 
 ## Resultados Obtidos
 
@@ -180,7 +184,7 @@ Como considerações finais, percebemos uma grande crescente no entendimento de 
 
 ## Principais dificuldades
 
-Como principal dificuldade podemos citar a linguagem de programação utilizada C++. Devido ao baixo uso da mesma no dercorrer do curso, nós não tinhamos muito conhecimento da mesma e desta forma tivemos que aprender ela como forma de 'pre-requisito' para desenvolver a atividade. Na parte mais difícil podemos citar o carregamento do objeto externo. 
+Como principal dificuldade podemos citar a linguagem de programação utilizada C++, mas como defeito nosso. Devido ao baixo uso da mesma no dercorrer do curso, nós não tinhamos muito conhecimento e desta forma tivemos que aprender ela como forma de 'pre-requisito' para desenvolver a atividade. Na parte mais difícil da implementação podemos citar o carregamento do objeto através da função loader que é dotada de termos técnicos da linguagem.
 
 
 
