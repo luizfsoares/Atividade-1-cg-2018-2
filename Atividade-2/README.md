@@ -186,6 +186,12 @@ Como considerações finais, percebemos uma grande crescente no entendimento de 
 
 Como principal dificuldade podemos citar a linguagem de programação utilizada C++, mas como defeito nosso. Devido ao baixo uso da mesma no dercorrer do curso, nós não tinhamos muito conhecimento e desta forma tivemos que aprender ela como forma de 'pre-requisito' para desenvolver a atividade. Na parte mais difícil da implementação podemos citar o carregamento do objeto através da função loader que é dotada de termos técnicos da linguagem.
 
+## Bibliografias utilizadas
+
+-Slides disponibilizados pelo professor Cristhian Pagot.
+
+-http://www.retondaro.pro.br/files/g_cg/aula6.pdf
+
 
 
 
